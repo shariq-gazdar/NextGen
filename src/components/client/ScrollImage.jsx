@@ -14,7 +14,7 @@ function ScrollImage({ images }) {
             alt={image.src}
             width={500}
             height={2000} // big enough to cover tall screenshots
-            className="object-top w-full h-auto transition-transform duration-[2000ms] ease-linear group-hover:translate-y-[-75%]"
+            className="object-top w-full h-auto transition-transform duration-[2000ms] ease-linear group-hover:translate-y-[-55%]"
           />
         </div>
       ))}

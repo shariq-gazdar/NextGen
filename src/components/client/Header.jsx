@@ -14,19 +14,22 @@ function Header() {
       </div>
 
       {/* Links */}
-      <div className="lg:flex justify-between w-[25%] hidden l">
-        <Link href="/" className="text-accent2 underline underline-offset-8">
+      <div className="lg:flex justify-between w-[35%] hidden ">
+        <Link
+          href="/"
+          className="text-accent2 underline underline-offset-[9px]"
+        >
           <h1>Home</h1>
         </Link>
         <Link
           href="/#services"
-          className="text-text hover:text-accent2 hover:underline hover:underline-offset-8"
+          className="text-text hover:text-accent2 hover:underline hover:underline-offset-[9px]"
         >
           <h1>Services</h1>
         </Link>
         <Link
           href="/#portfolio"
-          className="text-text hover:text-accent2 hover:underline hover:underline-offset-8"
+          className="text-text hover:text-accent2 hover:underline hover:underline-offset-[9px]"
         >
           <h1>Portfolio</h1>
         </Link>
@@ -72,18 +75,24 @@ function Header() {
         {/* Dropdown Menu */}
         {open && (
           <div className="absolute right-0 mt-2 w-40 bg-white  rounded-md py-2 text-text translate-x-1/2">
-            <Link href="/" className="block px-4 py-2 hover:bg-gray-100">
+            <Link
+              href="/"
+              className="block px-4 py-2 hover:bg-gray-100"
+              scroll={false}
+            >
               Home
             </Link>
             <Link
               href="/#services"
               className="block px-4 py-2 hover:bg-gray-100"
+              scroll={false}
             >
               Services
             </Link>
             <Link
               href="/#portfolio"
               className="block px-4 py-2 hover:bg-gray-100"
+              scroll={false}
             >
               Portfolio
             </Link>

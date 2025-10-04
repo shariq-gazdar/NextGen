@@ -5,8 +5,8 @@ import Image from "next/image";
 
 function Hero() {
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-center">
-      <div className="text-section py-10  font-heading font-bold">
+    <div className="flex flex-col lg:flex-row justify-between items-start">
+      <div className="text-section pt-10  font-heading font-bold">
         <h1 className="text-[50px]">Your vision, backed by</h1>
         <TypingEffect />
         <h3 className="font-normal font-text text-[17px] mt-5">

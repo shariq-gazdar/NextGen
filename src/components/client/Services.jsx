@@ -1,8 +1,11 @@
-import React from "react";
-import Card from "../client/Card";
-import ServiceMarquee from "../client/ServiceMarquee";
+"use client";
+import React, { useState } from "react";
+import Card from "./Card";
+import ServiceMarquee from "./ServiceMarquee";
+import Checkout from "./Checkout";
 
 function Services() {
+  const [isOpen, setIsOpen] = useState(false);
   const services = [
     {
       title: "AI Solutions",
@@ -70,13 +73,13 @@ function Services() {
 
   return (
     <div className="flex flex-col" id="services">
-      <h1 className="text-center w-full font-heading text-[45px] font-[600] py-3">
+      <h1 className="text-center w-full font-heading text-[45px] font-[600] py-4">
         Our Services
       </h1>
       {/* Service Cards */}
-      <div className="flex flex-wrap justify-between items-center gap-y-5">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-3 justify-center w-[101.5%] ">
         {services.map((service, index) => (
-          <Card key={index} service={service} />
+          <Card key={index} service={service} setIsOpen={setIsOpen} />
         ))}
       </div>
       {/* Marquee */}
@@ -103,6 +106,7 @@ function Services() {
         <strong className="mx-2 font-black">3 FULL-TIME EMPLOYEES</strong>
         FOR SAME COST AS 1 PART-TIME EMPLOYEE
       </h1>
+      <Checkout isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
   );
 }

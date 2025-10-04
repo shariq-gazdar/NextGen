@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-function Card({ service }) {
+function Card({ service, setIsOpen }) {
   const addToCart = () => {
     // get cart from localStorage
     let cart = JSON.parse(localStorage.getItem("cart") || "[]");
@@ -21,17 +21,18 @@ function Card({ service }) {
 
     // save back to localStorage
     localStorage.setItem("cart", JSON.stringify(cart));
-    window.location.reload();
+
+    setIsOpen(true);
   };
   return (
     <motion.div
-      className="relative w-[373px] h-[81px] bg-gray-200 rounded-lg flex items-center"
+      className="relative w-[95%] h-[81px] bg-gray-200 rounded-lg flex items-center"
       whileHover="hover"
       onClick={addToCart}
       initial="initial"
     >
       {/* Line + Dot container */}
-      <div className="absolute -left-6 top-0  flex justify-center h-[65px] translate-y-[15%]">
+      <div className="absolute -left-[4%] top-0  flex justify-center h-[65px] translate-y-[15%]">
         {/* Line */}
         <motion.div
           className="w-[2px] bg-green-500"
@@ -55,7 +56,7 @@ function Card({ service }) {
             filter: "drop-shadow(0 0 6px #22c55e)", // green glow
           }}
           variants={{
-            initial: { y: "65px", opacity: 0 },
+            initial: { y: "20px", opacity: 0 },
             hover: { y: "-65px", opacity: 1 },
           }}
           transition={{ duration: 1.5 }}
@@ -71,9 +72,11 @@ function Card({ service }) {
           alt={service.title}
           className="mr-5 scale-[45%]"
         />
-        <div className="flex flex-col justify-between h-20 py-1">
+        <div className="flex flex-col justify-between h-20 pt-2 pb-3 pr-1">
           <h1 className="font-heading text-[15px]">{service.title}</h1>
-          <p className="text-[14px] w-[99%] font-text">{service.description}</p>
+          <p className="text-[13px] w-[100%] font-text">
+            {service.description}
+          </p>
         </div>
       </div>
     </motion.div>

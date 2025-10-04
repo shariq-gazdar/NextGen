@@ -4,7 +4,7 @@ import { ReactTyped } from "react-typed";
 
 function TypingEffect() {
   return (
-    <div className="text-accent2 font-heading text-[50px]  ">
+    <div className="text-accent2 font-heading text-[50px] -mt-[4%]  ">
       <ReactTyped
         className="font-bold"
         strings={[

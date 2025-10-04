@@ -104,17 +104,17 @@ function WorkGallery() {
     <div className="flex flex-col items-center " id="portfolio">
       <h1 className="w-full text-center font-heading text-[45px]">Our Work</h1>
       <Tabs defaultValue="logo" className="bg-transparent">
-        <TabsList className="w-[90vw] flex justify-between lg:mb-10 flex-wrap mb-20">
-          <TabsTrigger value="logo" className="w-[25%] h-10">
+        <TabsList className="w-[90vw] flex justify-between lg:mb-10 flex-wrap mb-20 ">
+          <TabsTrigger value="logo" className="w-[24%] h-10">
             Logo
           </TabsTrigger>
-          <TabsTrigger value="simm" className="w-[25%] h-10">
+          <TabsTrigger value="simm" className="w-[24%] h-10">
             SIMM
           </TabsTrigger>
-          <TabsTrigger value="web-development" className="w-[25%] h-10">
+          <TabsTrigger value="web-development" className="w-[24%] h-10">
             Web Development
           </TabsTrigger>
-          <TabsTrigger value="2d/3d" className="w-full lg:w-[25%] h-10">
+          <TabsTrigger value="2d/3d" className="w-full lg:w-[24%] h-10">
             2D / 3D
           </TabsTrigger>
         </TabsList>

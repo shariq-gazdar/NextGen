@@ -10,7 +10,7 @@ import {
 import { ShoppingCart, X } from "lucide-react";
 import { Button } from "../ui/button";
 
-function Checkout() {
+function Checkout({ isOpen, setIsOpen }) {
   const [cart, setCart] = useState([]);
 
   const services = [
@@ -74,7 +74,7 @@ function Checkout() {
   useEffect(() => {
     const storedCart = JSON.parse(localStorage.getItem("cart") || "[]");
     setCart(storedCart);
-  }, []);
+  }, [isOpen]);
 
   // Find service icon by title
   const findServiceIcon = (title) => {
@@ -100,7 +100,7 @@ function Checkout() {
   };
 
   return (
-    <Sheet>
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <div className="fixed bottom-2 left-2">
         <SheetTrigger className="relative bg-accent2 p-3 rounded-full flex items-center justify-center">
           <ShoppingCart className="w-8 h-8" />
