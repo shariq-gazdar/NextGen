@@ -13,11 +13,11 @@ function Hero() {
           Stand out today. Scale with confidence tomorrow.
         </h3>
       </div>
-      <div className="image-section w-[35%] flex justify-center">
+      <div className="image-section w-full lg:w-[35%] flex justify-center">
         <Image
           src="/spherewave-white.gif"
-          height={300}
-          width={300}
+          height={400}
+          width={400}
           alt="hero-logo"
         />
       </div>

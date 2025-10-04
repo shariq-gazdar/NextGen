@@ -13,7 +13,7 @@ function TrustedLine() {
     "https://nextgenbusiness.co/wp-content/uploads/2025/08/Edward_Jones.png",
   ];
   return (
-    <div className="font-text flex  items-center flex-col lg:flex-row justify-center mt-[3%]">
+    <div className="font-text flex  items-center flex-col lg:flex-row justify-center ">
       <p>Trusted by top teams</p>
       <div className="flex justify-center items-center w-[85%] flex-col lg:flex-row">
         {images.map((image, index) => (
