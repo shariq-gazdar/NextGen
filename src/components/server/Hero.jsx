@@ -14,7 +14,12 @@ function Hero() {
         </h3>
       </div>
       <div className="image-section w-[35%] flex justify-center">
-        <Image src="/half-logo.png" height={300} width={300} alt="hero-logo" />
+        <Image
+          src="/spherewave-white.gif"
+          height={300}
+          width={300}
+          alt="hero-logo"
+        />
       </div>
     </div>
   );
