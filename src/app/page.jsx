@@ -10,7 +10,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="bg-background px-1 mx-10 border-l-gray-200 border-r-gray-border-l-gray-200 lg:border-l-2 lg:border-r-2  py-10 border-r-0 border-l-0 scroll-smooth">
+    <main className="bg-background px-5 mx-10 border-l-gray-100 border-r-gray-100 lg:border-l-2 lg:border-r-2 py-10 border-r-0 border-l-0 scroll-smooth">
       <Header />
       <Hero />
       <TrustedLine />
